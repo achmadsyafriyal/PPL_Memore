@@ -6,7 +6,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<link rel="icon" href="<?php echo base_url(); ?>assets/images/kc.png" type="image/png">
+	<link href="<?php echo base_url(); ?>assets/login/plugin/font-awesome/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url(); ?>assets/login/app/css/app-login-v2.css" rel="stylesheet" type="text/css">
+	<link href="<?php echo base_url(); ?>assets/login/plugin/sweetalert/css/sweetalert.css" rel="stylesheet" type="text/css">
+	<script src="<?php echo base_url(); ?>assets/login/plugin/sweetalert/js/sweetalert.min.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<title>Login Memore</title>
 
 	<!-- CSS -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -35,33 +41,37 @@
 </head>
 
 <body>
-	<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
-		<div class="w3-display-topleft w3-padding-large w3-xlarge">
-
-		</div>
-
-		<div class="container">
-			<div class="w3-display-middle w3-animate-opacity">
-				<h2 class="w3-jumbo font-italic" style=" color: black">ME'MORE LOGIN</h2>
-				<hr class="w3-border-grey" style="margin:auto;width:40%">
-				<br><br>
-				<form class="w3-container" method="post">
-					<label>User Name</label>
-					<input class="w3-input w3-border w3-light-grey" type="text" id="name" placeholder="Username">
-
-					<label>Password</label>
-					<input class="w3-input w3-border w3-light-grey" type="password" id="pwd" placeholder="Password">
-					<br>
-					<input class="w3-btn w3-white w3-border w3-round-large" type="submit" value="Login" id="submit">
-					<div id='err_msg' style='display: none'>
-						<div id='content_result'>
-							<div id='err_show' class="w3-text-red">
-								<div id='msg'> </div></label>
-							</div>
+	<div class="container animated fadeIn">
+		<div class="card card-container w3-animate-opacity">
+			<img id="profile-img" class="profile-img-card" src="<?php echo base_url(); ?>assets/images/logomemore.jpg">
+			<p id="profile-name" class="judul"><br>ME'MORE LOGIN</p>
+			<hr>
+			<?php
+			if ($this->input->post('email') != '') {
+				echo "<div class='alert alert-warning'><center>$title</center></div>";
+			} elseif ($this->input->post('a') != '') {
+				echo "<div class='alert alert-danger'><center>$title</center></div>";
+			}
+			?>
+			<!-- <div class="w3-display-middle w3-animate-opacity"> -->
+			<!-- <h2 class="w3-jumbo " style=" color: black">ME'MORE LOGIN</h2> -->
+			<form class="w3-container" method="post">
+				<!-- <label>User Name</label> -->
+				<input class="w3-input w3-border w3-light-grey" type="text" id="name" placeholder="Username">
+				<br>
+				<!-- <label>Password</label> -->
+				<input class="w3-input w3-border w3-light-grey" type="password" id="pwd" placeholder="Password">
+				<br>
+				<input class="w3-btn w3-white w3-border w3-round-large" type="submit" value="Login" id="submit">
+				<div id='err_msg' style='display: none'>
+					<div id='content_result'>
+						<div id='err_show' class="w3-text-red">
+							<div id='msg'> </div></label>
 						</div>
 					</div>
-				</form>
-			</div>
+				</div>
+			</form>
+			<!-- </div> -->
 		</div>
 	</div>
 
