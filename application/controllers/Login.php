@@ -22,7 +22,7 @@ class Login extends CI_Controller
 		$res = $this->data_model->islogin($data);
 		if ($res) {
 			$this->session->set_userdata($data['username']);
-			echo base_url() . index_page() . 'dashboard/';
+			echo base_url() . index_page() . '/dashboard/';
 
 			// $this->load->view('dashboard_view', $data);
 		} else {

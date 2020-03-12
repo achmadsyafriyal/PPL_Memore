@@ -1,17 +1,11 @@
 <!-- User Info -->
 <div class="user-info">
-	<!-- <div class='image'>
-        <?php $usr = $this->Model_app->view_where('users', array('username' => $this->session->username))->row_array();
-		if (trim($usr['foto']) == '') {
-			$foto = 'blank.png';
-		} else {
-			$foto = $usr['foto'];
-		} ?>
-        <img src='<?php echo base_url(); ?>/assets/foto_user/<?php echo $foto; ?>' width='48' height='48' alt='User' >
-    </div> -->
+	<div class='image'>
+		<!-- <img src='<?php echo base_url(); ?>/assets/foto_user/<?php echo $foto; ?>' width='48' height='48' alt='User'> -->
+	</div>
 	<div class='info-container'>
-		<div class='name' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><?php echo $usr['nama_lengkap'] ?></div>
-		<div class='email'><?php echo $usr['email'] ?></div>
+		<!-- <div class='name' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'><?php echo $usr['nama_lengkap'] ?></div> -->
+		<!-- <div class='email'><?php echo $usr['email'] ?></div> -->
 		<div class="btn-group user-helper-dropdown">
 			<i class="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">keyboard_arrow_down</i>
 			<ul class="dropdown-menu pull-right">
@@ -33,7 +27,7 @@
 			</a>
 		</li>
 		<!-- <?php
-				$cek = $this->Model_app->umenu_akses("identitaswebsite", $this->session->id_session);
+				$cek = $this->data_model->umenu_akses("identitaswebsite", $this->session->id_session);
 				if ($cek == 1 or $this->session->level == 'admin') {
 					echo "<li>
                     <a href='" . base_url() . $this->uri->segment(1) . "/identitaswebsite'>
@@ -50,12 +44,12 @@
 			</a>
 			<ul class="ml-menu">
 				<!-- <?php
-						$cek = $this->Model_app->umenu_akses("manajemenkeuangan", $this->session->id_session);
+						$cek = $this->data_model->umenu_akses("manajemenkeuangan", $this->session->id_session);
 						if ($cek == 1 or $this->session->level == 'admin') {
 							echo "<li><a href='" . base_url() . $this->uri->segment(1) . "/manajemenkeuangan'><i class='material-icons'>chevron_right</i> Kelola Keuangan</a></li>";
 						}
 
-						$cek = $this->Model_app->umenu_akses("detailkeuangan", $this->session->id_session);
+						$cek = $this->data_model->umenu_akses("detailkeuangan", $this->session->id_session);
 						if ($cek == 1 or $this->session->level == 'admin') {
 							echo "<li><a href='" . base_url() . $this->uri->segment(1) . "/laporan'><i class='material-icons'>chevron_right</i> Laporan Keuangan</a></li>";
 						}
@@ -70,12 +64,12 @@
 			</a>
 			<ul class="ml-menu">
 				<!-- <?php
-						$cek = $this->Model_app->umenu_akses("manajemenuser", $this->session->id_session);
+						$cek = $this->data_model->umenu_akses("manajemenuser", $this->session->id_session);
 						if ($cek == 1 or $this->session->level == 'admin') {
 							echo "<li><a href='" . base_url() . $this->uri->segment(1) . "/manajemenuser'><i class='material-icons'>chevron_right</i> Manajemen User</a></li>";
 						}
 
-						$cek = $this->Model_app->umenu_akses("manajemenmodul", $this->session->id_session);
+						$cek = $this->data_model->umenu_akses("manajemenmodul", $this->session->id_session);
 						if ($cek == 1 or $this->session->level == 'admin') {
 							echo "<li><a href='" . base_url() . $this->uri->segment(1) . "/manajemenmodul'><i class='material-icons'>chevron_right</i> Manajemen Modul</a></li>";
 						}
@@ -91,5 +85,7 @@
 	<div class="copyright">
 		<strong>&copy; <?php echo date('Y'); ?> All rights reserved.</strong>
 	</div>
-</div><strong>Copyright &copy; <?php echo date('Y'); ?> <a target='_BLANK' href="https://www.lawumedia.com"> Lawumedia Developer</a>.</strong> All rights reserved.
+	<div class="version">
+	</div>
+</div><strong>Copyright &copy; <?php echo date('Y'); ?> <a target='_BLANK' href=""></a>.</strong> All rights reserved.
 <!-- #Footer -->
